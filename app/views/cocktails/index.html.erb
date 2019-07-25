@@ -1,0 +1,4 @@
+<h1>Cocktails 🍸</h1>
+<% @cocktails.each do |cocktail| %>
+   <%= link_to "#{cocktail.name}",cocktail_path(cocktail), class: "text"%>
+<% end %>
