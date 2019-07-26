@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'cocktails', to: 'cocktails#index'
+  root to: 'cocktails#index'
   get '/cocktails/randomizer', to: 'cocktails#randomizer'
   post '/cocktails/randomizer', to: 'cocktails#create'
   resources :doses, only: [:destroy]
