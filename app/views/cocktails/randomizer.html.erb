@@ -3,8 +3,8 @@
 <div class="form m-4">
 <h1>Add Cocktail 🍹🍸</h1>
       <%= simple_form_for (@cocktail) do |f| %>
-      <%= f.input :name, label: "What is your name?", id: "name_field"%>
-      <%= f.input :description, type: "textarea" %>
+      <%= f.hidden_field :name, value: Faker::Hipster.name  %>
+      <%= f.hidden_field :description, value: Faker::Quote.famous_last_words %>
       <%= f.hidden_field :random, value: true %>
       <%= f.button :submit, class: 'btn btn-primary' %>
     <% end %>
