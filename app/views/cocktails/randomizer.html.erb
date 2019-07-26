@@ -1,7 +1,7 @@
 <%= render "shared/navbar2" %>
 
 <div class="form m-4">
-<h1>Add Cocktail 🍹🍸</h1>
+<h1>Let see what you get! Shake<i>It</i> 🍹🍸</h1>
       <%= simple_form_for (@cocktail) do |f| %>
       <%= f.hidden_field :name, value: %w(Yummy Stupid Sea Breeze Asia Curry Dirty).sample(2)  %>
       <%= f.input :description %>
