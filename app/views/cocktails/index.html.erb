@@ -1,4 +1,26 @@
-<h1>Cocktails 🍸</h1>
-<% @cocktails.each do |cocktail| %>
-   <%= link_to "#{cocktail.name}",cocktail_path(cocktail), class: "text"%>
-<% end %>
+<%= render "shared/navbar" %>
+
+<div class="home-banner">
+  <div class="banner-info">
+    <h1>Explore <strong>cocktails</strong> around <strong>the world</strong></h1>
+    <p>Enter the world of cocktails</p>
+  </div>
+  <div class="form-inline">
+    <%= form_tag(cocktails_path, method: :get) do %>
+      <%= text_field_tag :search, params[:search], class:"form-control mr-sm-2", class:"input", placeholder: "Search for a cocktail" %>
+      <%= submit_tag ("search"), style: "display: none", class:"search" %>
+    <div class="search"></div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="cards" id="index">
+   <% @cocktails.each do |cocktail| %>
+   <%= link_to cocktail_path(cocktail) do %>
+     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= cocktail.name %>
+        </div>
+      <% end %>
+   <% end %>
+</div>

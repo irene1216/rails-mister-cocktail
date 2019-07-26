@@ -1,0 +1,11 @@
+<nav class="navbar navbar-light fixed-top navbar-lewagon d-flex">
+  <%= link_to cocktails_path do %>
+    <div id="navbar-brand" id="navbar-brand-top" class="mr-auto">Cocktails</div>
+  <% end %>
+
+  <div class="ml-auto">
+    <%= link_to "Cocktail Randomizer", cocktails_randomizer_path, id: "navbar-brand", class: "nav-one", class: "animated shake delay-2s" %>
+    <%= link_to "Add Cocktail", new_cocktail_path, id: "navbar-brand", class: "nav-one", class: "pr-3 animated shake delay-2s" %>
+  </div>
+</nav>
+
