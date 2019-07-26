@@ -64,3 +64,6 @@ gem 'simple_form'
 gem 'animate.css-rails', '~> 3.2.0'
 gem 'carrierwave', '~> 1.2'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+
+
